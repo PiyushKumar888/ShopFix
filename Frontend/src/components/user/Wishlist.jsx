@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { WishlistCard } from './WishlistCard';
+import { WishlistCard } from './WishlistCard.jsx';
 import {toast} from "react-hot-toast";
 import {PageLoader} from "../loaders/PageLoader.jsx";
 import api from "../../config/api.js";
