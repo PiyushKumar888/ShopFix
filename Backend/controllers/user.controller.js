@@ -2,7 +2,7 @@ import {User} from "../models/user.model.js"
 import asyncHandler from "../utils/asyncHandler.js";
 import {ApiResponse} from "../utils/ApiResponse.js";
 import {ApiError} from "../utils/ApiError.js";
-import sendMail from "../utils/SendMail.js";
+import sendmail from "../utils/sendmail.js";
 import jwt from "jsonwebtoken";
 
 export const register = asyncHandler(async (req, res) => {
@@ -51,7 +51,7 @@ export const register = asyncHandler(async (req, res) => {
 `;
 
     if (userData){
-        await sendMail(email, "Welcome message to new user","Welcome",html)
+        await sendmail(email, "Welcome message to new user","Welcome",html)
     }
 
     return res.status(200)
@@ -150,7 +150,7 @@ export const resendOTP = asyncHandler(async (req, res) => {
     user.otp=otp;
     user.otpExpire = otpExpire;
     await user.save()
-    await sendMail(loweremail,"OTP Resend :",message)
+    await sendmail(loweremail,"OTP Resend :",message)
     return res.status(200).json(new ApiResponse("OTP Resend :",200))
 
 

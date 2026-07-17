@@ -3,7 +3,7 @@ import {Cart} from "../models/Cart.model.js";
 import asyncHandler from "../utils/asyncHandler.js";
 import {ApiError} from "../utils/ApiError.js";
 import {ApiResponse} from "../utils/ApiResponse.js";
-import sendMail from "../utils/sendMail.js";
+import sendmail from "../utils/sendmail.js";
 import {User} from "../models/user.model.js";
 import {Product} from "../models/product.model.js";
 import mongoose from "mongoose";

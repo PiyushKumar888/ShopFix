@@ -5,7 +5,7 @@ import {ApiError} from "./ApiError.js";
 
 
 
-const sendMail = async (
+const sendmail = async (
     to,
     subject,
     text,
@@ -40,4 +40,4 @@ const sendMail = async (
 
 }
 
-export default sendMail;
+export default sendmail;

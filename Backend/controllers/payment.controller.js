@@ -5,7 +5,7 @@ import {Order} from "../models/order.model.js";
 import {ApiError} from "../utils/ApiError.js";
 import {ApiResponse} from "../utils/ApiResponse.js";
 import {Cart} from "../models/Cart.model.js";
-import sendMail from "../utils/sendMail.js";
+import sendmail from "../utils/sendmail.js";
 import {User} from "../models/user.model.js";
 
 export const createPayment = asyncHandler(async (req, res) => {
@@ -76,7 +76,7 @@ export const verifyPayment = asyncHandler(async (req, res) => {
             <p><strong>Order ID:</strong> ${order._id}</p>
             <p><strong>Total Amount Paid:</strong> ₹${order.totalAmount}</p>
         `;
-        await sendMail(user.email, "Order placed successfully!", "Completed", message);
+        await sendmail(user.email, "Order placed successfully!", "Completed", message);
         res.status(200).json(new ApiResponse("Payment verified successfully", 200));
     } else {
 
