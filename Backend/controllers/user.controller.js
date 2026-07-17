@@ -84,12 +84,14 @@ export const login = asyncHandler(async (req, res) => {
 
     const cookieOptions={
         httpOnly: true,
+        sameSite: "none",
         maxAge:15*60*1000,
         secure:process.env.NODE_ENV==="production",
 
     }
     const refreshcookieOptions={
         httpOnly: true,
+        sameSite: "none",
         maxAge:7*24*60*60*1000,
         secure:process.env.NODE_ENV==="production",
 
@@ -195,11 +197,13 @@ export const refreshUser  = asyncHandler(async (req, res) => {
         const safeUser = await User.findById(user._id).select("-password");
         const cookieOptions={
             httpOnly: true,
+            sameSite: "none",
             maxAge:15*60*1000,
             secure:process.env.NODE_ENV==="production",
         }
     const refreshcookieOptions={
         httpOnly: true,
+        sameSite: "none",
         maxAge:7*24*60*60*1000,
         secure:process.env.NODE_ENV==="production",
     }
@@ -218,12 +222,14 @@ export const logout = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id).select("-password");
     const cookieOptions={
         httpOnly: true,
+        sameSite: "none",
         secure:process.env.NODE_ENV === "production",
         maxAge:15*60*1000
 
     }
     const refreshcookieOptions={
         httpOnly: true,
+        sameSite: "none",
         secure:process.env.NODE_ENV === "production",
         maxAge:7*24*60*60*1000
 
