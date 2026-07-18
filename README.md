@@ -266,7 +266,7 @@ Interactive analytics dashboard displaying revenue trends and business insights 
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/ShopFix.git
+git clone https://github.com/PiyushKumar888/ShopFix.git
 ```
 
 Move into the project directory
