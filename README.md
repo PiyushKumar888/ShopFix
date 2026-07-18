@@ -26,10 +26,10 @@ Built using React, Redux Toolkit, Node.js, Express.js, MongoDB, JWT Authenticati
 ## 🚀 Live Demo
 
 🌐 **Live Website:**  
-[Visit ShopFix](YOUR_VERCEL_LINK)
+[Visit ShopFix](https://shop-fix-qwen.vercel.app/)
 
 🎥 **Demo Video:**  
-[Watch Live Demo](YOUR_GOOGLE_DRIVE_LINK)
+[Watch Live Demo](https://drive.google.com/file/d/1Kj1F4VJknpVZhnwIcJMzZPG5IIZuBjxE/view?usp=drive_link)
 
 ---
 
@@ -78,6 +78,14 @@ The primary objective of this project was to build a scalable real-world MERN ap
 - Dark Mode
 
 ---
+
+## 💳 Payment & Checkout
+
+- Secure Online Payments using Stripe
+- Payment Verification
+- Checkout Flow
+- Order Creation after Successful Payment
+- Failed Payment Handling
 
 ## 🤖 AI Features
 
